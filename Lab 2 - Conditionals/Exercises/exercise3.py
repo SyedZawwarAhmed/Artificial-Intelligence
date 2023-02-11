@@ -1,5 +1,5 @@
 password =  "abc$123"
-inputPassword = input("Enter Password:- ").lower()
+inputPassword = input("What is the password? ").lower()
 
 if password == inputPassword:
     print("Welcome")
