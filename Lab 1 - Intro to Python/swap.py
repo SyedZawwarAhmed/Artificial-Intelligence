@@ -4,9 +4,9 @@ c = int(input("Enter a number:- "))
 d = int(input("Enter a number:- "))
 
 arr = [a, b, c, d]
+
+print(f'Before swapping:- a = {a}, b = {b}, c = {c}, d = {d}')
+
 [d, c, b, a] = arr
 
-print("a", a)
-print("b", b)
-print("c", c)
-print("d", d)
+print(f'After swapping:- a = {a}, b = {b}, c = {c}, d = {d}')
