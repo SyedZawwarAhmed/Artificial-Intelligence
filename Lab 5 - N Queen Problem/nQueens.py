@@ -220,7 +220,7 @@ class Board:
 
 
 if __name__ == '__main__':
-    n = 4
+    n = 8
     newBoard = Board(n)
     newBoard.solveBoard()
     newBoard.printBoard()
