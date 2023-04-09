@@ -56,9 +56,9 @@ class Board:
             i = 0
             j = abs(row+column)
             if j >= n:
-                j=n-1
+                j = n-1
                 i = row + column - n + 1
-            while  j >= 0 and i < n:
+            while j >= 0 and i < n:
                 square = self.board[i][j]
                 square.isAvailable = False
                 square.threatened += 1
@@ -78,7 +78,7 @@ class Board:
             j = 0
             i = abs(row+column)
             if i >= n:
-                i=n-1
+                i = n-1
                 j = row + column - n + 1
             while i >= 0 and j < n:
                 square = self.board[i][j]
@@ -96,11 +96,11 @@ class Board:
                 square.threatened += 1
                 i += 1
                 j += 1
-            
+
             j = 0
             i = abs(row+column)
             if i >= n:
-                i=n-1
+                i = n-1
                 j = row + column - n + 1
             while i >= 0 and j < n:
                 square = self.board[i][j]
@@ -137,9 +137,9 @@ class Board:
             i = 0
             j = abs(row+column)
             if j >= n:
-                j=n-1
+                j = n-1
                 i = row + column - n + 1
-            while  j >= 0 and i < n:
+            while j >= 0 and i < n:
                 square = self.board[i][j]
                 square.isAvailable = False
                 square.threatened -= 1
@@ -159,7 +159,7 @@ class Board:
             j = 0
             i = abs(row+column)
             if i >= n:
-                i=n-1
+                i = n-1
                 j = row + column - n + 1
             while i >= 0 and j < n:
                 square = self.board[i][j]
@@ -177,11 +177,11 @@ class Board:
                 square.threatened -= 1
                 i += 1
                 j += 1
-            
+
             j = 0
             i = abs(row+column)
             if i >= n:
-                i=n-1
+                i = n-1
                 j = row + column - n + 1
             while i >= 0 and j < n:
                 square = self.board[i][j]
@@ -189,7 +189,6 @@ class Board:
                 square.threatened -= 1
                 i -= 1
                 j += 1
-    
 
     def solveBoard(self):
         solution = []
@@ -207,7 +206,6 @@ class Board:
                 queenPositions.pop(-1)
                 numberOfQueensPlaced -= 1
 
-
             square = self.board[row][column]
             if not square.isChecked and square.threatened == 0:
                 self.placeQueen(row, column)
@@ -219,7 +217,7 @@ class Board:
             else:
                 square.isChecked = True
                 row += 1
-                
+
 
 if __name__ == '__main__':
     n = 4
